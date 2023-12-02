@@ -1,11 +1,13 @@
-## Basic Java Project Pull from Git and Setup Jenkins for CICD:
+## Java Project Setup with CI/CD
+Here will create a basic ***Java Maven Project*** and push the code to ***github*** repository. Then setup jenkins job which will pull from the code from ***Git*** and execute the job
 
+### Local System Setup
 * Install Eclipse.
 * Do git clone of the Repository
 * Import the Project
-* Install Testng in eclipse
+* Install Testg in eclipse
 
-* Plugins required:
+### Plugins required
 Maven Integration plugin Plugin for Maven feature.
 HTML Publisher plugin for Report show
 ```
@@ -16,10 +18,10 @@ c.Git Server Plugin
 d.GitHub API Plugin
 e.GitHub Branch Source Plugin
 f.GitHub Plugin
-````
+```
       
-* Global Tool Configuration
-Maven:
+### Global Tool Configuration
+Maven
 ```
 Maven
 C:\Program Files\apache-maven-3.6.0
@@ -35,7 +37,7 @@ Name: Default
 C:\Program Files\Git\bin
 ```
 
-#### Parameterized Job Setup Complete Configuration
+## Parameterized Job Setup Complete Configuration
 1. Select Maven Project
 2. Select Git Project and give the Git URL
 3. Select, This project is parameterized
@@ -84,7 +86,7 @@ Publish TestNG XML Report:**/**/testng-results.xml
 Issues:
 Go to Manage Jenkins > Script Console > enter value > System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src * 'unsafe-inline' 'unsafe-eval';script-src 'self' 'unsafe-inline' 'unsafe-eval'"); > Click Run 2 times... it will work
 
-### Katalon Integration:
+## Katalon Integration:
 [Article Link](https://dzone.com/articles/how-to-setup-the-integration-with-jenkins-and-other)
 
 Windows Batch Command:
@@ -96,11 +98,12 @@ katalon -noSplash  -runMode=console -projectPath="C:\Users\king\.jenkins\workspa
 echo Success
 ```
 
-#### Test Results Viewing - Install Test Result Analyzer to View the Junit Report:
+## Test Results Viewing
+  Install Test Result Analyzer to View the Junit Report:
 https://wiki.jenkins.io/display/JENKINS/Test+Results+Analyzer+Plugin
 
 
-### Built Triggers Poll SCM:
+## Built Triggers Poll SCM:
 
 Chron syntax: * * * * *
 ```cmd
@@ -123,14 +126,11 @@ Examples:
 0 2-4 * * *   2 AM ,3 AM , 4 AM Every Day
 ```
 
-### Code Quality and Code Coverage Metrix Report: Plugins
+## Code Quality and Code Coverage Metrix Report: Plugins
 ***Plugins***  : CheckStyle,PMD,FindBugs
 
 * https://wiki.jenkins.io/display/JENKINS/Checkstyle+Plugin
 * https://wiki.jenkins.io/display/JENKINS/PMD+Plugin
 * https://wiki.jenkins.io/display/JENKINS/FindBugs+Plugin
 
-### Jenkins Pipeline:
-1. Declarative
-2. Scripted Pipeline
 

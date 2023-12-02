@@ -1,6 +1,11 @@
-# Some Pipeline Scripts
 
-*** Basic Scripted Pipeline***
+## Jenkins Pipeline Overview
+There are 2 types of Jenkins Pipeline <br>
+1. Declarative
+2. Scripted Pipeline
+
+## Basic Scripted Pipeline
+Simple Scripted Pipeline Example
 ```java
   node {
     stage('Build') {
@@ -24,7 +29,7 @@ node {
       echo "Integration Test"
   }
 ```
-*** Basic Declarative Pipeline Running on any stage***
+## Basic Declarative Pipeline Running on any stage
 ```java
 
 pipeline {
@@ -61,6 +66,8 @@ post {
 
 }
 ```
+
+## Adding Agents In pipeline Script
 We can also define specific *** agent*** where the build would run
 ```java
   agent {
@@ -105,6 +112,8 @@ pipeline {
     }
 }
 ```
+
+## Usage of Env Variables in Pipeline Script
 Now we want to use some environment variables.
 We will find those in **pipeline syntax** , in **global variable reference**
 ```java
@@ -135,6 +144,7 @@ JOB_NAME =jenkins-devops-microservice-pipelines
 BUILD_TAG =jenkins-jenkins-devops-microservice-pipelines-3
 ```
 
+## Tools of Build Machine
 Now by using **Maven** and **Docker** available  on the build Machine
 ```java
 pipeline {
@@ -155,7 +165,7 @@ pipeline {
 }    
 ```
 
-## The full Pipeline Script
+## Complex Pipeline Script
 
 Repo it Refers: https://github.com/kingshuknandy2016/Jenkins-devops-microservice-complete
 
