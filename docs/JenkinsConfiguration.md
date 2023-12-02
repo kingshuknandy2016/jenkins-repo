@@ -86,7 +86,7 @@ Publish TestNG XML Report:**/**/testng-results.xml
 Issues:
 Go to Manage Jenkins > Script Console > enter value > System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src * 'unsafe-inline' 'unsafe-eval';script-src 'self' 'unsafe-inline' 'unsafe-eval'"); > Click Run 2 times... it will work
 
-## Katalon Integration:
+## Katalon Integration
 [Article Link](https://dzone.com/articles/how-to-setup-the-integration-with-jenkins-and-other)
 
 Windows Batch Command:
